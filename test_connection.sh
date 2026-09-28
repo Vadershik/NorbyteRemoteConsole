@@ -45,12 +45,15 @@ if command -v nmap > /dev/null 2>&1; then
     fi
 fi
 
-# 5. Тестовое подключение Python скриптом
+# 5. Тестовое подключение клиентом bg3_console.py
 echo -n "5. Python connect test: "
-if python3 /home/kolya/Projects/REMCON/remote_lua_console.py -H $TARGET_IP -p $TARGET_PORT -e "print('test')" -t 2 2>&1 | grep -q "Отправлено"; then
-    echo "✅ Python script connected"
+CONSOLE="$(dirname "$0")/bg3_console.py"
+if OUTPUT=$(python3 "$CONSOLE" -H $TARGET_IP -p $TARGET_PORT -e "print('test')" -t 2 2>&1); then
+    echo "✅ connected, command sent"
+    [ -n "$OUTPUT" ] && echo "$OUTPUT" | sed 's/^/     /'
 else
-    echo "❌ Python script failed"
+    echo "❌ failed to connect"
+    echo "$OUTPUT" | sed 's/^/     /'
 fi
 
 echo ""
