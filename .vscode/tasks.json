@@ -1,0 +1,25 @@
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "label": "ssh-tunnel",
+//             "type": "shell",
+//             "command": "ssh -N -L 9998:localhost:9998 kolya@192.168.0.107 &",
+//             "problemMatcher": [],
+//             "presentation": {
+//                 "reveal": "never",
+//                 "panel": "dedicated"
+//             },
+//             "isBackground": true,
+//             "runOptions": {
+//                 "instanceLimit": 1
+//             }
+//         },
+//         {
+//             "label": "kill-ssh-tunnel",
+//             "type": "shell",
+//             "command": "pkill -f 'ssh.*9998:localhost:9998'",
+//             "problemMatcher": []
+//         }
+//     ]
+// }

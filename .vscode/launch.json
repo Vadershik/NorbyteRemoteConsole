@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BG3 Extender v32 Console (Linux)",
+            "type": "node",
+            "request": "launch",
+            "debugServer": 9999
+        }
+    ]
+}

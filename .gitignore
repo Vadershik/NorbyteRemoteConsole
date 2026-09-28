@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.venv/
+venv/
+
+# Это каталог, а не файл с переменными окружения
+.env/
+
+# Сторонние бинарники bg3se (скачиваются отдельно)
+*.dll
+*.exe
+*.exe.config
+DAP.log
+
+# Пустая папка-заглушка
+norbyte/
+
+# VS Code
+.vscode/*.log
