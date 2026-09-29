@@ -23,14 +23,21 @@
   "LuaDebuggerPort": 9998
 }
 ```
+### 1.1. Временное открытие порта
+Скачиваем nmap -> запускаем powershell:
+```powershell
+.\ncat.exe -lk -p 9999 -c ".\ncat.exe 127.0.0.1 9998"
+```
+Это откроет временно нам переадресацию с 9999 порта на 9998, пока запущено окно powershell.
 
+### 1.2. Постоянное открытие порта
 Откройте порт в брандмауэре (PowerShell от администратора):
 
 ```powershell
 New-NetFirewallRule -DisplayName "BG3 Lua Debugger" `
   -Direction Inbound -Protocol TCP -LocalPort 9998 -Action Allow
 ```
-
+### Продолжение настройки
 Проверьте, что игра слушает порт:
 
 ```powershell
