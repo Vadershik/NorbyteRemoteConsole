@@ -14,8 +14,8 @@ Full documentation: [English](docs/README_en.md) · [Русский](docs/README
 
 | Side | What you need |
 |---|---|
-| Windows (machine with the game) | [Script Extender](https://github.com/Norbyte/bg3se) + a loaded save |
-| Linux (this machine) | Python 3.8+, nothing else |
+| Windows (машина с игрой) | [Script Extender](https://github.com/Norbyte/bg3se) + загруженное сохранение |
+| Linux (машина для подключения) | Python 3.8+ |
 
 ## 1. Setup on Windows
 
@@ -27,6 +27,12 @@ Enable the debugger. Edit `%LOCALAPPDATA%\Larian Studios\Baldur's Gate 3\ScriptE
   "LuaDebuggerPort": 9998
 }
 ```
+### 1.1. Временное открытие порта
+Скачиваем nmap -> запускаем powershell:
+```powershell
+.\ncat.exe -lk -p 9999 -c ".\ncat.exe 127.0.0.1 9998"
+```
+Это откроет временно нам переадресацию с 9999 порта на 9998, пока запущено окно powershell.
 
 Open the port in the firewall (PowerShell as administrator):
 
@@ -125,7 +131,7 @@ nc -zv 192.168.0.107 9998
 |---|---|
 | `Connection refused` | debugger is not listening — no save loaded or `bg3_dx11.exe` not running |
 | timeout | Windows firewall is blocking |
-| `✖ send failed` | connection dropped, try `:reconnect` |
+| `send failed` | connection dropped, try `:reconnect` |
 
 ## How it works
 
