@@ -1,12 +1,12 @@
 # BG3 Remote Lua Console
 
-**English** | [Русский](docs/README_ru.md)
+**English** | [Русский](README_ru.md)
 
 Remote Lua code execution in Baldur's Gate 3 with Script Extender (bg3se) from a terminal on Linux/macOS.
 
 Works over the binary protobuf protocol of the Lua debugger — no VS Code and no `ncat` tunnels.
 
-Full documentation: [English](docs/README_en.md) · [Русский](docs/README_ru.md)
+Full documentation: [English](README_en.md) · [Русский](README_ru.md)
 
 ---
 
