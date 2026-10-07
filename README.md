@@ -11,7 +11,7 @@
 | На стороне | Что нужно |
 |---|---|
 | Windows (машина с игрой) | [Script Extender](https://github.com/Norbyte/bg3se) + загруженное сохранение |
-| Linux (эта машина) | Python 3.8+, ничего больше |
+| Linux (машина для подключения) | Python 3.8+ |
 
 ## 1. Настройка на Windows
 
