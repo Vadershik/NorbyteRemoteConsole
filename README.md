@@ -14,8 +14,8 @@ Full documentation: [English](docs/README_en.md) · [Русский](docs/README
 
 | Side | What you need |
 |---|---|
-| Windows (машина с игрой) | [Script Extender](https://github.com/Norbyte/bg3se) + загруженное сохранение |
-| Linux (машина для подключения) | Python 3.8+ |
+| Windows (machine with game) | [Script Extender](https://github.com/Norbyte/bg3se) + loaded safe |
+| Linux (machine for connection) | Python 3.8+ |
 
 ## 1. Setup on Windows
 
@@ -28,11 +28,11 @@ Enable the debugger. Edit `%LOCALAPPDATA%\Larian Studios\Baldur's Gate 3\ScriptE
 }
 ```
 ### 1.1. Временное открытие порта
-Скачиваем nmap -> запускаем powershell:
+Download nmap -> run powershell in windows:
 ```powershell
 .\ncat.exe -lk -p 9999 -c ".\ncat.exe 127.0.0.1 9998"
 ```
-Это откроет временно нам переадресацию с 9999 порта на 9998, пока запущено окно powershell.
+This will temporarily open a port forwarding from port 9999 to 9998 while the powershell window is running.
 
 Open the port in the firewall (PowerShell as administrator):
 
